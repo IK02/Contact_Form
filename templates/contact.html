@@ -44,16 +44,17 @@
         <input type="submit" value="問い合わせ" />
         <h3>過去のお問い合わせ一覧</h3>
         {% for pastcontact in pastcontacts %}
-        <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color: #737373; color: #ffffff;">
-        <article>
-	        <p>ユーザー名：{{ pastcontact.username }}</p>
-	        <p>お問い合わせ日時：{{ pastcontact.created_at }}</p>
-	        <p>お問い合わせ内容:</p>
-            <p>{{ pastcontact.description }}</p>
-            <a href="/delete/{{ pastcontact.id }}" role="button">削除</a>
-	    </article>
+        <div
+            style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color: #737373; color: #ffffff;">
+            <article>
+                <p>ユーザー名：{{ pastcontact.username }}</p>
+                <p>お問い合わせ日時：{{ pastcontact.created_at }}</p>
+                <p>お問い合わせ内容:</p>
+                <p>{{ pastcontact.description }}</p>
+                <a href="/delete/{{ pastcontact.id }}" role="button">削除</a>
+            </article>
         </div>
-	    {% endfor %}
+        {% endfor %}
     </form>
 </body>
 
